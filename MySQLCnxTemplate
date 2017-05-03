@@ -1,0 +1,1 @@
+connect = {'User': 'uname', 'Pass': 'pass', 'IP': 'xxx.xxx.xxx.xxx', 'DB' : 'MySQLDatabaseName'}
