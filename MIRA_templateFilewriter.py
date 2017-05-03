@@ -96,7 +96,7 @@ def main():
 
     cnx =  connect #makes variable declaration a string
     exec(cnx) #executes declaration of variable using string from previous step
-
+    cnx = mysql.connector.connect(user=connect['User'], password= connect['Pass'], host= connect['IP'], database=connect['DB'])
 
     cursor = cnx.cursor()
 
