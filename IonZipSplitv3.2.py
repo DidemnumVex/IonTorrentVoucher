@@ -100,13 +100,14 @@ def assemble(df, directory, out):#might need global dir here because of num inpu
     dirs2mir = []
     lpop = range(len(df))
 #    for i in lpop:
+    if os.path.exists(directory + out + 'MIRA_assemblies') == False:
+        os.system('mkdir ' + directory + out + 'MIRA_assemblies')
     for bcname in bcs:
         for w in wells['Well']:
 #            temp = []
             rop = str(df['IonLibraryName']) + '/' + str(df['ExtractionPlate']) + '/' + str(df['ExtractionPlate']) + "_split" + str(bcname) + "/seqs_" + str(w) + ".fastq" 
             if os.path.isfile(directory  + rop):
-                if os.path.exists == False:
-                    os.system('mkdir ' + directory + out + 'MIRA_assemblies')
+                
                 os.chdir(directory + out + 'MIRA_assemblies')
 #                os.system('pwd')
                 os.system("/home/tcampbell/ENVTC/MIRA/mira_4.0.2_linux-gnu_x86_64_static/bin/mira " + \
