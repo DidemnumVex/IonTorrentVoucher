@@ -94,7 +94,7 @@ def split_libs(df,directory, out, func):###This was performed with map.  Input a
 
             
 def assemble(df, directory, out):#might need global dir here because of num inputs allowed. also check filewriter inputs
-#    global directory
+
     bcs = ["Geller", "Heller"]
     wells =pd.read_csv(directory  + "WellIDs.csv")
     dirs2mir = []
@@ -104,13 +104,15 @@ def assemble(df, directory, out):#might need global dir here because of num inpu
         for w in wells['Well']:
 #            temp = []
             rop = str(df['IonLibraryName']) + '/' + str(df['ExtractionPlate']) + '/' + str(df['ExtractionPlate']) + "_split" + str(bcname) + "/seqs_" + str(w) + ".fastq" 
-            if os.path.isfile(directory + out + rop):
+            if os.path.isfile(directory  + rop):
+                if os.path.exists == False:
+                    os.system('mkdir ' + directory + out + 'MIRA_assemblies')
                 os.chdir(directory + out + 'MIRA_assemblies')
 #                os.system('pwd')
                 os.system("/home/tcampbell/ENVTC/MIRA/mira_4.0.2_linux-gnu_x86_64_static/bin/mira " + \
-                directory + out + str(df['IonLibraryName']) +'/'+ str(df['ExtractionPlate']) + '/'+ str(df['ExtractionPlate']) + '_'+ str(w) + '_' + bcname + '_miratemp_3.txt')
+                directory  + str(df['IonLibraryName']) +'/'+ str(df['ExtractionPlate']) + '/'+ str(df['ExtractionPlate']) + '_'+ str(w) + '_' + bcname + '_miratemp_3.txt')
     print 'NEXT'        
-    return None            
+    return None          
 
  
 
