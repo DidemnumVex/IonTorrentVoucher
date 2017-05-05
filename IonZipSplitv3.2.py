@@ -200,9 +200,9 @@ class SequenceMatrix:#Wrote as class because I thought about sending  more insta
         os.system("'ls' " + directory + "*/IonXpress_*.fastq -l >> " + directory + out + "renameplates.log")   # appends all the plates that weren't renamed properly, probably not in query   
         return self.nonans         
 
-########THIS FUNCTION SHOULD BE ITS OWN  PROGRAM. Pull all this garbage out and stick it into main().         
+.         
     def qiime_split_libraries(self, directory, out, Cores):#See notebook. Must split files then, then recombine, split files by sample ID, concatenate
-        #This should really be its own program.  Much of the stuff up until now is unneccessary if the splitting has been done.
+        
         self.uniqplate = self.df.drop_duplicates(subset= 'ExtractionPlate') #Returns unique items
         self.smallplate = self.uniqplate[100: ]#subset for testing code
 #        
@@ -215,7 +215,7 @@ class SequenceMatrix:#Wrote as class because I thought about sending  more insta
 ###########This stuff is all to write MIRA template FILES######################
         args = [q,"print"]
 #        global results
-#        results = []
+#       ['convert', 'split', 'fnamer','concat','mira'] #change below into iterable.
         PID = os.getpid()
         d = [directory, out, PID]
         qi = [i + d + ['convert'] for i in q] #For systemsplit.  Goes SOOOOO FAST compared to single thread!!!
