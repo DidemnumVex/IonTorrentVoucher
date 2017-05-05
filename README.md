@@ -17,4 +17,4 @@ My To-Do List for this pipeline:
     - 1) [ ] order of operations 
     - 2) [ ] command line arguments
     - 3) [ ] input file structure 
-- [ ] Add logging feature with if statement to 'start from' section in case of crash \n
+- [ ] Add logging feature with if statement to 'start from' section in case of crash 
