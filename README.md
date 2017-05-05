@@ -14,7 +14,7 @@ My To-Do List for this pipeline:
 
 - [ ]Upload remaining scripts 
 - [ ]Write user documentation to show 
-    1)[ ] order of operations 
-    2)[ ] command line arguments
-    3)[ ] input file structure 
+    - 1)[ ] order of operations 
+    - 2)[ ] command line arguments
+    - 3)[ ] input file structure 
 - [ ]Add logging feature with if statement to 'start from' section in case of crash \n
