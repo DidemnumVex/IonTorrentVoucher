@@ -3,12 +3,14 @@
 Created on Fri Feb 24 14:07:00 2017
 
 IonZipSplit.py
+This is the primary script of the first half of this pipeline.
 
 Will sort, rename, unzip, and split fastq files for downstream processing
 V2 multiprocessing functional, leaves child processes open
 V2_2 Now closes child processes without crashing
 Not finished, need to add sys.args and if exists to not overwrite files
 Dependencies: MIRA_templateFilewriter and MySQL connection text file
+V3 Added command line arguments, output directory option
 @author: tcampbell
 """
 
