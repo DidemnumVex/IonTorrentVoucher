@@ -273,7 +273,7 @@ def main():
     parser.add_argument('--Cores', type = int, default = 56, help = 'Number of processing cores to use. Default is 56.')
     args = parser.parse_args()
     
-    connect = mysqlconnect('/home/tcampbell/scripts/Testdict.txt') #gets the connection info from config file
+    connect = mysqlconnect('/path/to/cnx/file.txt') #gets the connection info from config file
     
 
     exec(connect) #executes declaration of variable using string from previous step
