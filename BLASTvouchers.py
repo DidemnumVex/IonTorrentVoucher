@@ -45,7 +45,7 @@ def applyblast(df):
     os.kill(processid, signal.SIGTERM)
     return None
 
-def parsxml(filein):
+def parsxml(filein):#Want to write own BLAST xml parser. this is ridiculously slow.
     result_handle = open(filein)
     blast_records = NCBIXML.parse(result_handle)
     assembly = 0
