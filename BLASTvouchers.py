@@ -73,8 +73,8 @@ def parsxml(filein):#Want to write own BLAST xml parser. this is ridiculously sl
 
 def main():
     #===============PARSE ARGS===========================
-    parser = argparse.ArgumentParser(prog='IonZipSplitv3', usage='Insert Assembled Contigs into MySQL database', description=
-             'Insert Assembled Sequences into DB', conflict_handler='error', add_help=True)
+    parser = argparse.ArgumentParser(prog='BLASTvouchers', usage='BLAST vouchers against in house reference database', description=
+             'BLAST against Coarbitrator', conflict_handler='error', add_help=True)
     parser.add_argument('--SequenceFiles', type = str, nargs = '+', help = 'File names of Sequencing Runs to assemble')
     parser.add_argument('--Out', type = str, help = 'Output Directory, e.g. if /home/user/Documents/out/ then out/')
     parser.add_argument('--DataDir', type=str, help = 'The directory where your data are found. e.g. /home/user/Documents/')
