@@ -91,7 +91,7 @@ def WriteToInvertDB(seqdf,cnx):#writes sequence records to InvertDB
 
 def main():
 #============PARSE ARGS================================================
-    parser = argparse.ArgumentParser(prog='IonZipSplitv3', usage='Insert Assembled Contigs into MySQL database', description=
+    parser = argparse.ArgumentParser(prog='AssembledSequenceProcess', usage='Insert Assembled Contigs into MySQL database', description=
              'Insert Assembled Sequences into DB', conflict_handler='error', add_help=True)
     parser.add_argument('--SequenceFiles', type = str, nargs = '+', help = 'File names of Sequencing Runs to assemble')
     parser.add_argument('--Out', type = str, help = 'Output Directory, e.g. if /home/user/Documents/out/ then out/')
