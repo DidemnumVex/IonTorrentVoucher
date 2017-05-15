@@ -16,5 +16,6 @@ My To-Do List for this pipeline:
 - [ ] Write user documentation to show 
     - 1) [ ] order of operations 
     - 2) [ ] command line arguments
-    - 3) [ ] input file structure 
+    - 3) [ ] input file structure
+    - 4) [ ] convert everything to sqlalchemy engine rather than mysql.connection 
 - [ ] Add logging feature with if statement to 'start from' section in case of crash 
