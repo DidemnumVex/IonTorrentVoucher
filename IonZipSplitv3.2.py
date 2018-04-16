@@ -11,7 +11,7 @@ V2_2 Now closes child processes without crashing
 Not finished, need to add sys.args and if exists to not overwrite files
 Dependencies: MIRA_templateFilewriter and MySQL connection text file
 V3 Added command line arguments, output directory option
-@author: tcampbell
+
 """
 
 import os
@@ -84,7 +84,7 @@ def split_libs(df,directory, out, func):###This was performed with map.  Input a
                 fastqfile = str(df['IonLibraryName']) + "/" + str(df['ExtractionPlate']) + "/" + str(df['ExtractionPlate']) + "_split" + bcname + "/seqs_" + str(w) + ".fastq"
                 if os.path.isfile(fastqfile) == False:#writefile is the mira templatefile writer
                     writefile(fastqfile , directory,  str(df['IonLibraryName']), str(df['ExtractionPlate']), str(w), bcname)
-#            print "/home/tcampbell/ENVTC/MIRA/mira_4.0.2_linux-gnu_x86_64_static/bin/mira" + \
+#            print "/home/user/ENVTC/MIRA/mira_4.0.2_linux-gnu_x86_64_static/bin/mira" + \
             
         elif func == 'concat':
             if bcname == "Heller" and str(df['IonLibraryName']) == "CalNISii_iCOI_Library_Q":#should add heller column or input
@@ -112,7 +112,7 @@ def assemble(df, directory, out):#might need global dir here because of num inpu
                 
                 os.chdir(directory + out + 'MIRA_assemblies')
 #                os.system('pwd')
-                os.system("/home/tcampbell/ENVTC/MIRA/mira_4.0.2_linux-gnu_x86_64_static/bin/mira " + \
+                os.system("/home/user/ENVTC/MIRA/mira_4.0.2_linux-gnu_x86_64_static/bin/mira " + \
                 directory  + str(df['IonLibraryName']) +'/'+ str(df['ExtractionPlate']) + '/'+ str(df['ExtractionPlate']) + '_'+ str(w) + '_' + bcname + '_miratemp_3.txt')
     print 'NEXT'        
     return None          
